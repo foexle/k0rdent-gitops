@@ -1,18 +1,24 @@
 apiVersion: k0rdent.mirantis.com/v1alpha1
 kind: ClusterDeployment
 metadata:
-  name: vsurzhyk-aws-managed-dev-1
+  name: my-test-1
   namespace: dev
 spec:
-  template: aws-standalone-cp-0-2-0
-  credential: aws-cluster-identity-cred
+  template: openstack-standalone-cp-0-2-0
+  credential: os-cluster-identity-cred
   config:
     clusterLabels:
       env: dev
+    authURL: https://keystone.ic-eu.ssl.mirantis.net/
     controlPlaneNumber: 3
     workersNumber: 1
-    region: eu-west-2
     controlPlane:
-      instanceType: t3.medium
+      flavor: system.compact.openstack.telemetry
+      image:
+        filter:
+          name: ubuntu-24.04-x86_64
     worker:
-      instanceType: t3.medium
+      image:
+        filter:
+          name: ubuntu-24.04-x86_64
+      instanceType: system.compact.openstack.telemetry

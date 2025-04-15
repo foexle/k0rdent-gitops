@@ -12,7 +12,7 @@ spec:
   - namespace: dev
     server: https://kubernetes.default.svc
   sourceRepos:
-  - https://github.com/ironreality/k0rdent-gitops
+  - https://github.com/foexle/k0rdent-gitops
   roles:
   - description: dev project administrator
     groups:

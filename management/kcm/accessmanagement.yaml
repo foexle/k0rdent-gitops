@@ -11,8 +11,3 @@ spec:
         - dev
     clusterTemplateChains:
       - dev
-  - targetNamespaces:
-      list:
-        - stage
-    clusterTemplateChains:
-      - stage
