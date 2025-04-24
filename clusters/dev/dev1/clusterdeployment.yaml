@@ -20,6 +20,7 @@ spec:
       image:
         filter:
           name: ubuntu-24.04-x86_64
+      sshPublicKey: heiko
     worker:
       flavor: system.compact.openstack.telemetry
       image:
