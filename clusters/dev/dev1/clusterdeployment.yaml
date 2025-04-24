@@ -22,3 +22,7 @@ spec:
         filter:
           name: ubuntu-24.04-x86_64
       instanceType: system.compact.openstack.telemetry
+    identityRef:
+      name: openstack-cloud-config
+      cloudName: openstack
+      region: RegionOne
