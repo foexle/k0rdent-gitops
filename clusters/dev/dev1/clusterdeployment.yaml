@@ -10,7 +10,9 @@ spec:
     clusterLabels:
       env: dev
     authURL: https://keystone.ic-eu.ssl.mirantis.net/
-    externalNetwork: public
+    externalNetwork:
+      filter:
+        name: "public"
     controlPlaneNumber: 3
     workersNumber: 1
     controlPlane:
