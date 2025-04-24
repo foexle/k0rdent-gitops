@@ -10,6 +10,7 @@ spec:
     clusterLabels:
       env: dev
     authURL: https://keystone.ic-eu.ssl.mirantis.net/
+    externalNetwork: public
     controlPlaneNumber: 3
     workersNumber: 1
     controlPlane:
@@ -22,7 +23,7 @@ spec:
       image:
         filter:
           name: ubuntu-24.04-x86_64
-      instanceType: system.compact.openstack.telemetry
+      sshPublicKey: heiko
     identityRef:
       name: openstack-cloud-config
       cloudName: openstack
