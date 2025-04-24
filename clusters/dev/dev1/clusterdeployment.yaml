@@ -18,6 +18,7 @@ spec:
         filter:
           name: ubuntu-24.04-x86_64
     worker:
+      flavor: system.compact.openstack.telemetry
       image:
         filter:
           name: ubuntu-24.04-x86_64
